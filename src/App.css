@@ -1,0 +1,31 @@
+.App {
+  background-color: #a7e0ff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Bahnschrift;
+}
+
+.appContainer {
+  width: 50%;
+}
+
+.generatedTextWrapper {
+  background-color: azure;
+  border-radius: 5px;
+  max-height: 215px;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
+.generatedTextWrapper div {
+  padding: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .appContainer {
+    width: 80%;
+  }
+}
