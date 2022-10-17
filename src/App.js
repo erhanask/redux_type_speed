@@ -1,6 +1,7 @@
 import './App.css';
 import {GeneratedText} from "./components/GeneratedText";
 import {InfoBar} from "./components/InfoBar";
+import {WordInput} from "./components/WordInput";
 
 function App() {
     return (
@@ -8,6 +9,7 @@ function App() {
             <div className="appContainer">
                 <GeneratedText/>
                 <InfoBar/>
+                <WordInput/>
             </div>
         </div>
     );
