@@ -1,11 +1,13 @@
+import {useSelector} from "react-redux";
+
 export const InfoBar = () => {
-
-
+    const timeLeft = useSelector(state => state.typer.timeLeft);
+    
     return (
         <div className={`InfoBarWrapper row mt-2`}>
             <div className={`timeLeft col-4 pr-0`}>
                 <div className={`border rounded bg-light text-center h5 p-1 m-0`}>
-                    60 S
+                    {timeLeft}
                 </div>
             </div>
             <div className={`trueCount col-4`}>

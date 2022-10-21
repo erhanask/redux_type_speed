@@ -8,10 +8,20 @@ const TyperSlice = createSlice({
         timeLeft: 60,
         correct: 10,
         wrong: 5,
+        isStarted: false
     },
     reducers: {
+        reduceTime: (state, action) => {
+            if (state.timeLeft !== 0)
+                state.timeLeft--;
+            else
+                state.isStarted = false;
+        },
+        setStarted: (state, action) => {
+            state.isStarted = action.payload;
+        }
     },
 })
 
-
+export const {reduceTime, setStarted} = TyperSlice.actions;
 export default TyperSlice.reducer;
