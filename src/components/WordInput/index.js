@@ -1,9 +1,9 @@
 import {useDispatch, useSelector} from "react-redux";
-import {reduceTime, setStarted} from "../../redux/TyperSlice";
+import {answerCheck, reduceTime, setStarted} from "../../redux/TyperSlice";
 
 export const WordInput = () => {
     const dispatch = useDispatch();
-    const timeLeft = useSelector(state => state.typer.timeLeft);
+    // const timeLeft = useSelector(state => state.typer.timeLeft);
     const isStarted = useSelector(state => state.typer.isStarted);
 
     const startGame = () => {
@@ -16,10 +16,11 @@ export const WordInput = () => {
     }
 
     const checkWord = (word) => {
-        console.log(word);
+        dispatch(answerCheck(word));
     }
     return (
         <div className={`row mt-2 w-100 mx-0`}>
+
             <input type={`text`} placeholder={`Type To Start`} onChange={(e) => {
                 if (!isStarted) {
                     startGame();

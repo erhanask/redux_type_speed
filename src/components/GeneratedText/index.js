@@ -3,7 +3,6 @@ import {useSelector} from "react-redux";
 
 export const GeneratedText = () => {
     const wordsArray = useSelector(state => state.typer.words);
-
     return (
         <div className={`generatedTextWrapper`}>
             <div>
